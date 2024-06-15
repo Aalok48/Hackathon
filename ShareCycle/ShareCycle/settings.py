@@ -53,8 +53,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.contrib.sites',
-    'django.template.context_processors.request',
     'allauth.account.middleware.AccountMiddleware'
 ]
 
@@ -137,6 +135,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 
-    'allauth.account.auth_backends.AuthenticationBackend',
-    ...
+    # 'allauth.account.auth_backends.AuthenticationBackend',
 ]
+
+SITE_ID = 1
